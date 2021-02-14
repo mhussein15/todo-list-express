@@ -1,6 +1,12 @@
 const express = require("express");
 const router = express.Router();
-const { TaskCreate, TaskFind } = require("../controllers/ListControllers");
+const {
+  TaskCreate,
+  TaskFind,
+  TaskDetail,
+  TaskDelete,
+  TaskUpdate,
+} = require("../controllers/ListControllers");
 
 router.get("/", TaskFind);
 

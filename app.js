@@ -3,11 +3,9 @@ const app = express();
 const db = require("./db/models");
 const listRoutes = require("./routes/todo");
 
-
 const PORT = 8000;
 app.listen(PORT);
 app.use(express.json());
-
 
 app.use("/todoList", listRoutes);
 
