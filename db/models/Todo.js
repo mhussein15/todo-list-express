@@ -5,20 +5,17 @@ module.exports = (sequelize, DataTypes) => {
     name: {
       type: DataTypes.STRING(20),
       allowNull: false,
-      unique: true,
     },
     status: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
-      defaultValue: true,
     },
     priority: {
       type: DataTypes.STRING(20),
       allowNull: false,
     },
-    deadlineDate: {
+    deadLineDate: {
       type: DataTypes.DATEONLY,
-      isDate: true,
     },
   });
   SequelizeSlugify.slugifyModel(TodoModal, {
