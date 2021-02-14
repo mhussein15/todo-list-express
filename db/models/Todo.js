@@ -3,7 +3,7 @@ const SequelizeSlugify = require("sequelize-slugify");
 module.exports = (sequelize, DataTypes) => {
   const TodoModal = sequelize.define("Todo", {
     name: {
-      type: DataTypes.STRING(20),
+      type: DataTypes.STRING,
       allowNull: false,
     },
     status: {
@@ -11,11 +11,14 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
     },
     priority: {
-      type: DataTypes.STRING(20),
+      type: DataTypes.STRING,
       allowNull: false,
     },
     deadLineDate: {
-      type: DataTypes.DATEONLY,
+      type: DataTypes.DATE,
+    },
+    slug: {
+      type: DataTypes.STRING,
     },
   });
   SequelizeSlugify.slugifyModel(TodoModal, {
