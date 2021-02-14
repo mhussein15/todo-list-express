@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const db = require("./db/models");
-const listRoutes = require("../routes/todo");
+const listRoutes = require("./routes/todo");
 
 app.use("/todoList", listRoutes);
 
