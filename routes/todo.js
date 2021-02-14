@@ -2,7 +2,14 @@ const express = require("express");
 const router = express.Router();
 const { TaskCreate, TaskFind } = require("../controllers/ListControllers");
 
-router.post("/", TaskCreate);
 router.get("/", TaskFind);
+
+router.post("/", TaskCreate);
+
+router.get("/:taskID", TaskDetail);
+
+router.delete("/:taskID", TaskDelete);
+
+router.put("/:taskID", TaskUpdate);
 
 module.exports = router;
